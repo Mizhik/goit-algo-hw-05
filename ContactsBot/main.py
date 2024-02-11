@@ -11,8 +11,11 @@ def parse_input(user_input):
 @input_error
 def add_contact(args, contacts):
     name, phone = args
-    contacts[name] = phone
-    return "Contact added."
+    if not name in contacts:
+        contacts[name] = phone
+        return "Contact added."
+    else:
+        return "Already have"
 
 @input_error
 def show_phone(args, contacts):
