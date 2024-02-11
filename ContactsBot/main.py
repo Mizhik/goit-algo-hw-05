@@ -12,8 +12,7 @@ def parse_input(user_input):
 def add_contact(args, contacts):
     name, phone = args
     contacts[name] = phone
-    if name in contacts:
-        return "Contact added."
+    return "Contact added."
 
 @input_error
 def show_phone(args, contacts):
